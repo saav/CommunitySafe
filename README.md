@@ -1,5 +1,5 @@
 # Community Safe
-## _An application in which the user will get an alert before the severe weather event. 
+## An application in which the user will get an alert before the severe weather event. 
 They will get real-time data related to extreme weather events and a community to interact with each other and develop findings from data visualization._
 
 
