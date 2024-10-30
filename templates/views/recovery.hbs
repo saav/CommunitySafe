@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/recovery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+   /* .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:  center;
+  
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: calc(40% - 20px);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+@media(max-width:667px) {
+  .card{
+    margin-left:100px;
+    background-color: red;
+    z-index: -1;
+  }  
+}
+*/
+
+
+body{
+  margin-top:20px;
+  
+  
+}
+.service-container {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container .icon {
+  margin-top: 5%;
+  font-size: 38px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container .number-icon .icon-2 {
+  height: 70px;
+  width: 70px;
+  line-height: 80px;
+  border-radius: 64% 36% 55% 45% / 76% 72% 28% 24% !important;
+  border-color: #f89d36 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#container-box{
+  margin-top: 150px;
+  
+}
+
+.service-container .number-icon .icon-2 i {
+  font-size: 30px;
+}
+
+.service-container .number-icon .number {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  margin: 0 auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container .number-icon .number span {
+  line-height: 30px;
+}
+
+.service-container .content .number {
+  font-size: 40px;
+  color: #dee2e6;
+}
+
+.service-container .content .title {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container.hover-bg {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container.hover-bg .smooth-icon {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  font-size: 60px;
+  color: #f8f9fa;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.service-container.hover-bg:hover {
+  background-color: #f89d36;
+}
+
+.service-container.hover-bg:hover .content .title {
+  color: #ffffff !important;
+}
+
+.service-container.hover-bg:hover .content .serv-pera {
+  color: #fafafb !important;
+}
+
+.service-container.hover-bg:hover .smooth-icon {
+  font-size: 100px;
+  opacity: 0.2;
+  bottom: -20px;
+  right: 10px;
+}
+
+.service-container:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+          box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+}
+
+.service-container:hover .icon {
+  color: #f89d36;
+  -webkit-animation: mover 1s infinite alternate;
+          animation: mover 1s infinite alternate;
+}
+
+.service-container:hover .number-icon .icon-2 {
+  background-color: #f89d36;
+  border-radius: 50% !important;
+}
+
+.service-container:hover .number-icon .icon-2 i {
+  color: #ffffff !important;
+}
+
+.service-container:hover .number-icon .number {
+  color: #ffffff;
+  background: #f89d36 !important;
+  border-color: #ffffff !important;
+}
+
+.service-container:hover .content .title {
+  color: #f89d36;
+}
+
+.service-container a:hover,
+.service-container a .title:hover {
+  color: #f89d36 !important;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+.service-wrapper {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .icon {
+  width: 60px;
+  height: 60px;
+  line-height: 45px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .content .title {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 500;
+}
+
+.service-wrapper .big-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper:hover {
+  -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+          box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+  background: #ffffff;
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  border-color: transparent !important;
+}
+
+.service-wrapper:hover .icon {
+  background: #0062ff !important;
+  color: #ffffff !important;
+}
+
+.service-wrapper:hover .big-icon {
+  z-index: -1;
+  opacity: 0.1;
+  font-size: 160px;
+}
+
+.text-custom {
+    color: #0062ff !important;
+}
+
+.uim-svg {
+    display: inline-block;
+    height: 1em;
+    vertical-align: -0.125em;
+    font-size: inherit;
+    fill: var(--uim-color, currentColor);
+}
+.messContainer{
+  margin: 120px ;
+  text-align: center;
+}
+#bodyC{
+  background-color: black;
+  color: white;
+}
+#col1,#col2,#col3{
+  background-color: black;
+
+}
+.mt-3 .text-primary{
+  font-size: 25px;
+   
+}
+ 
+ 
+ 
+   </style>
+</head>
+<body id="bodyC">
+    {{>navbar}}
+
+    {{!-- <div class="container1">
+  <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbXVuaXR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="Snow"  >
+  <div class="centered">
+    <h1 style="color:rgb(255, 255, 255);">Help Us to Raise the Fund</h1>
+   
+  </div>
+</div>
+  
+
+    <div class="card-container">
+  <div class="card">
+    <a href="/payment" style="text-decoration:none;">
+      <div class="card-content">
+        <h2>Donation</h2>
+        <p>
+          please help out people by donating what-ever ammount you have
+        </p>
+      </div>
+      <button>Donate</button>
+    </a>
+  </div>
+  
+  <div class="card">
+    <a href="/shelter" style="text-decoration:none;">
+      <div class="card-content">
+        <h2>Shelter Donation</h2>
+        <p>
+          Provide help in form of Shelter and food to the hostages.
+        </p>
+      </div>
+      <button>Donate Shelter</button>
+    </a>
+  </div>
+</div>
+
+
+ --}}
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="messContainer">
+  <h2>Join us in building a resilient community together!</h2>
+<h4> Your donation will make a difference in our disaster management efforts, helping us prepare, respond, and recover swiftly in times of crisis. Every contribution counts, and together we can create a safer and more secure future for all. Thank you for your support!</h4>
+
+</div>
+ 
+ <div class="container" id="container-box">
+     
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2" id="col1">
+            <div class="card service-wrapper rounded border-0 shadow p-4 bg-dark text-white" id="cardhover">
+                <div class="icon text-center text-custom h1 shadow rounded bg-dark">
+                    <span class="uim-svg" style=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><rect width="20" height="15" x="2" y="3" class="uim-tertiary" rx="3"></rect><path class="uim-primary" d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path></svg></span>
+                </div>
+                <div class="content mt-4">
+                    <h5 class="title">Donate Money</h5>
+                    <p class="text  mt-3 mb-0">Be the part of the community and help needy people</p>
+                    <div class="mt-3">
+                        <a href="/payment" class="text-primary">Donate Money<i class="mdi mdi-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="big-icon h1 text-custom">
+                    <span class="uim-svg" style=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><rect width="20" height="15" x="2" y="3" class="uim-tertiary" rx="3"></rect><path class="uim-primary" d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path></svg></span>
+                </div>
+            </div>
+        </div><!--end col-->
+
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2" id="col2">
+            <div class="card service-wrapper rounded border-0 shadow p-4 bg-dark text-white">
+                <div class="icon text-center text-custom h1 shadow rounded bg-dark">
+                    <span class="uim-svg" style=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-quaternary" d="M15,2c-3.3772,0.00142-6.27155,2.41462-6.88025,5.73651c2.90693-1.59074,6.553-0.52375,8.14374,2.38317c0.98206,1.79462,0.98206,3.96594,0,5.76057c3.8013-0.69634,6.31837-4.3424,5.62202-8.14369C21.27662,4.41261,18.37925,1.99872,15,2z"></path><circle cx="7" cy="17" r="5" class="uim-primary"></circle><path class="uim-tertiary" d="M11,7c-3.08339,0.00031-5.66461,2.33759-5.97,5.40582c2.5358-1.08949,5.47469,0.08297,6.56418,2.61877c0.54113,1.25947,0.54113,2.68593,0,3.94541c3.29729-0.32786,5.7045-3.26663,5.37664-6.56392C16.66569,9.33735,14.08386,6.99972,11,7z"></path></svg></span>
+                </div>
+                <div class="content mt-4">
+                    <h5 class="title">Donate Shelter</h5>
+                    <p class="text mt-3 mb-0">Be the part of community and give shelter for needy people</p>
+                    <div class="mt-3">
+                        <a href="/shelter" class="text-primary">Donate Shelter <i class="mdi mdi-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="big-icon h1 text-custom">
+                    <span class="uim-svg" style=""><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-quaternary" d="M15,2c-3.3772,0.00142-6.27155,2.41462-6.88025,5.73651c2.90693-1.59074,6.553-0.52375,8.14374,2.38317c0.98206,1.79462,0.98206,3.96594,0,5.76057c3.8013-0.69634,6.31837-4.3424,5.62202-8.14369C21.27662,4.41261,18.37925,1.99872,15,2z"></path><circle cx="7" cy="17" r="5" class="uim-primary"></circle><path class="uim-tertiary" d="M11,7c-3.08339,0.00031-5.66461,2.33759-5.97,5.40582c2.5358-1.08949,5.47469,0.08297,6.56418,2.61877c0.54113,1.25947,0.54113,2.68593,0,3.94541c3.29729-0.32786,5.7045-3.26663,5.37664-6.56392C16.66569,9.33735,14.08386,6.99972,11,7z"></path></svg></span>
+                </div>
+            </div>
+        </div><!--end col-->
+        
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2" id="col3">
+            <div class="card service-wrapper rounded border-0 shadow p-4 bg-dark text-white">
+                <div class="icon text-center text-custom h1 shadow rounded bg-dark">
+                    <span class="uim-svg" style=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><path class="uim-quaternary" d="M6,23H2a.99974.99974,0,0,1-1-1V16a.99974.99974,0,0,1,1-1H6a.99974.99974,0,0,1,1,1v6A.99974.99974,0,0,1,6,23Z"></path><path class="uim-tertiary" d="M14,23H10a.99974.99974,0,0,1-1-1V10a.99974.99974,0,0,1,1-1h4a.99974.99974,0,0,1,1,1V22A.99974.99974,0,0,1,14,23Z"></path><path class="uim-primary" d="M22,23H18a.99974.99974,0,0,1-1-1V2a.99974.99974,0,0,1,1-1h4a.99974.99974,0,0,1,1,1V22A.99974.99974,0,0,1,22,23Z"></path></svg></span>
+                </div>
+                <div class="content mt-4">
+                    <h5 class="title">Donate Food</h5>
+                    <p class="mt-3 mb-0">Be the part of Community and Help Needy to feed.</p>
+                    <div class="mt-3">
+                        <a href="/shelter" class="text-primary">Donate Food<i class="mdi mdi-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="big-icon h1 text-custom">
+                    <span class="uim-svg" style=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><path class="uim-quaternary" d="M6,23H2a.99974.99974,0,0,1-1-1V16a.99974.99974,0,0,1,1-1H6a.99974.99974,0,0,1,1,1v6A.99974.99974,0,0,1,6,23Z"></path><path class="uim-tertiary" d="M14,23H10a.99974.99974,0,0,1-1-1V10a.99974.99974,0,0,1,1-1h4a.99974.99974,0,0,1,1,1V22A.99974.99974,0,0,1,14,23Z"></path><path class="uim-primary" d="M22,23H18a.99974.99974,0,0,1-1-1V2a.99974.99974,0,0,1,1-1h4a.99974.99974,0,0,1,1,1V22A.99974.99974,0,0,1,22,23Z"></path></svg></span>
+                </div>
+            </div>
+        </div><!--end col-->
+        
+        
+    </div><!--end row-->
+</div>
+
+
+
+
+
+
+
+    {{>footer}}
+</body>
+</html>

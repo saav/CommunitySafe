@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog1</title>
+    {{!-- <link rel="stylesheet" href="blog1.css"> --}}
+    <style>
+        /* Declaring Custom Properties */
+:root {
+    /* Font Settings */
+    --font: 1em/1.5 'Avenir Next', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: Palatino, Georgia, 'Times New Roman', serif;
+    --font-bold: 600;
+    --heading-line-height: 1.1;
+    
+    /* Layout */
+    --layout: grid;
+    --spacing-half: .75em;
+    --spacing-default: 1.5em;
+    --spacing-double: 3em;
+    
+    /* Widths */
+    --page-width: 80em; /* 1280px */
+    --post-width: 50em; /* 800px */
+    
+    /* Colors */
+    --background: #fafbfc;
+    --text: #242526;
+    --primary-color: cornflowerblue;
+    --secondary-color: forestgreen;
+    --tertiary-color: tomato;
+}
+
+/* Setting fallback defaults for IE */
+html {
+    font: 1em/1.5 'Avenir Next', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    text-rendering: optimizelegibility;
+    background: #fafbfc;
+    color: #232425;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2.0em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1.0em;
+    margin: 0;
+}
+
+p + p {
+    margin-top: 1.5em;
+}
+
+em,
+i{
+    font-style: italic;
+}
+
+blockquote,
+figure {
+    margin: 3em 0;
+}
+
+blockquote {
+    font-family: Palatino, Georgia, 'Times New Roman', serif;
+    font-size: 1.125em;
+    border-left: .25em solid #acaeab;
+    padding: 1em 1em 1em 1.5em;
+    background: #edefec;
+    border-radius: .25em;
+}
+
+blockquote > * {
+    margin-top: 0;
+}
+
+blockquote :last-child {
+    margin-bottom: 0;
+}
+
+img {
+    height: 600px;
+    
+}
+
+
+/* Main */
+main {
+    display: block; /* IE */
+    margin: 4em auto;
+    max-width: 50em;
+}
+
+/* Modern Browsers get custom properties to play with. */
+@supports(--font: 1em) {
+    body {
+        font: var(--font);
+        max-width: var(--page-width);
+        background: var(--background);
+        color: var(--text);
+    }
+    
+    h2,
+    h3,
+    strong,
+    th {
+        font-weight: var(--font-bold);
+    }
+    
+    h2,
+    h3{
+        line-height: var(--heading-line-height);
+    }
+    
+    
+    /* Main */
+    main {
+        max-width: var(--post-width);
+    }
+    }
+
+@supports(grid-gap: 1em) {
+    body {
+        font-size: calc(1rem + 1vh);
+        display: var(--layout);
+        grid-gap: var(--spacing-double) var(--spacing-default);
+        grid-template-columns: repeat(12, 1fr);
+        max-width: 100%;
+    }
+    
+    body > * {
+        margin: 0;
+    }
+    
+    
+    main {
+        grid-column: 1 / -1;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    article {
+        display: var(--layout);
+        grid-row-gap: var(--spacing-default);
+        grid-template-columns: repeat(16, 1fr);
+    }
+    
+    article > * {
+        grid-column: 4 / 12;
+        margin: 0;
+    }
+    
+    article p + p {
+        margin: 0;
+    }
+    
+    article .introduction {
+        font-size: 1.25rem;
+        display: var(--layout);
+        grid-row-gap: var(--spacing-default);
+        grid-column: 2 / span 8;
+        margin-bottom: var(--spacing-double);
+    }
+    
+    .introduction > * {
+        margin: 0;
+    }
+    
+    article > figure {
+        display: var(--layout);
+        grid-template-columns: repeat(16, 1fr);
+        grid-column: 1 / -1;
+        margin-bottom: var(--spacing-default);
+    }
+    
+    article > blockquote {
+        margin: var(--spacing-half) 0;
+    }
+    
+    figcaption {
+        grid-column: 4 / -4;
+    }
+    
+    img {
+        grid-column: 2 / -2;
+        {{!-- max-height: 50%;
+        max-width: 70%; --}}
+        
+    }
+    
+    blockquote {
+        grid-column: 3 / -3;
+    }
+    
+    @media (max-width: 75em) {
+        body {
+            font-size: calc(1em + .5vh);
+        }
+        
+        article > * {
+            grid-column: 4 / -4;
+        }
+        
+        article .introduction {
+            font-size: 1.125rem;
+            grid-column: 2 / -4;
+        }
+        
+        article > figure {
+            grid-column: 2 / -2;
+        }
+        
+        img {
+            grid-column: 1 / -1;
+        }
+        
+        figcaption,
+        blockquote {
+            grid-column: 2 / -2;
+        }
+    }
+    .sk{
+        width: 90%;
+        height: 70%;
+    }
+}
+    </style>
+</head>
+<body>
+    {{!-- {{>navbar}} --}}
+    <main role="main">
+        <article>
+            <section class="introduction">
+                <h2>Shaken to the Core: Exploring Earthquakes in Seria</h2>
+                <p>Seria, a town in Brunei, has experienced its fair share of seismic activity, being located in a region prone to earthquakes. These natural phenomena, driven by tectonic forces beneath the Earth's surface, have the potential to cause widespread destruction and pose significant risks to the safety and well-being of Seria's residents. In this blog post, we will delve into the topic of earthquakes in Seria, examining their causes, impacts, and the importance of preparedness in mitigating their effects.</p>
+            </section>
+            
+            <figure>
+                <img class="sk" src="img/blog1/1.jpg" alt="image" />
+            </figure>            
+            <blockquote>
+                <h3>Tectonic Setting:</h3>
+                <p>Seria lies within a tectonically active region known as the Sunda Megathrust, where the Eurasian and Australian tectonic plates converge. This subduction zone is responsible for the frequent occurrence of earthquakes in the area. The interaction between these plates causes immense pressure to build up over time, eventually leading to sudden releases of energy in the form of seismic waves.</p>
+            </blockquote>
+            <figure>
+                <img class="sk"src="img/blog1/2.jpg" alt="image" />
+            </figure>            
+            <blockquote>
+                <h3>Magnitude and Intensity:</h3>
+                <p>Earthquakes are measured on the Richter scale, which quantifies the amount of energy released during an earthquake. The magnitude scale ranges from minor tremors (less than 3.0) to major quakes (greater than 7.0). The intensity of an earthquake, on the other hand, measures the effects felt at a specific location, taking into account factors such as the distance from the epicenter and the local geology.</p>
+            </blockquote>
+            <figure>
+                <img class="sk"src="img/blog1/3.jpg" alt="image" />
+            </figure>            
+            <blockquote>
+                <h3>Impacts on Infrastructure and Buildings:</h3>
+                <p>One of the most significant consequences of earthquakes is the damage they can inflict upon buildings and infrastructure. In Seria, vulnerable structures may suffer structural failures, leading to collapses and endangering lives. Ensuring the implementation of robust building codes, including seismic-resistant design and construction practices, is crucial in minimizing the impact of earthquakes on buildings and infrastructure.</p>
+            </blockquote>
+            <figure>
+                <img class="sk"src="img/blog1/4.jpg" alt="image" />
+            </figure>            
+            <blockquote>
+                <h3>Potential Hazards:</h3>
+                <p>Earthquakes in Seria can also trigger secondary hazards that pose additional risks to the population. These hazards include landslides, liquefaction (the transformation of solid soil into a liquid-like state), and tsunamis in coastal areas. Understanding and mapping these potential hazards are vital in developing effective disaster response plans.</p>
+            </blockquote>
+            <figure>
+                <img class="sk"src="img/blog1/5.jpg" alt="image" />
+            </figure>            
+            <blockquote>
+                <h3>Emergency Preparedness:</h3>
+                <p>Preparedness is key to mitigating the effects of earthquakes. Establishing early warning systems that can provide advance notice of seismic activity allows people to seek shelter and evacuate if necessary. Emergency response plans, community drills, and public education programs are essential in raising awareness and ensuring that individuals and communities are equipped with the knowledge and resources to respond effectively during and after an earthquake.</p>
+            </blockquote>
+            <figure>
+                <img class="sk"src="img/blog1/6.jpg" alt="img" />
+            </figure>           
+            <blockquote>
+                <h3>Long-Term Recovery and Resilience:</h3>
+                <p>Recovering from the aftermath of an earthquake is a challenging process that requires time, resources, and collective effort. The restoration of infrastructure, provision of emergency services, and psychosocial support for affected individuals are crucial aspects of the recovery phase. Additionally, investing in long-term resilience measures, such as land-use planning and strengthening critical infrastructure, helps mitigate the impact of future earthquakes.</p>
+            </blockquote>
+            <figure>
+                  <img class="sk"src="img/blog1/7.jpg" alt="gif">
+            </figure>            
+            <section class="introduction">
+                <h2>Conclusion:</h2>
+                <p>Earthquakes in Seria serve as potent reminders of the Earth's dynamic nature and the risks associated with living in seismically active regions. By understanding the causes and impacts of earthquakes, Seria can take proactive steps to enhance preparedness, strengthen infrastructure, and develop effective response and recovery strategies. Through a combination of public awareness, investment in seismic-resistant infrastructure, and community collaboration, Seria can strive towards a safer and more resilient future in the face of seismic events.</p>
+            </section>
+        </article>
+    </main>
+    {{!-- {{>footer}} --}}
+    
+</body>
+</html>

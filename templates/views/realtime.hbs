@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/partials.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--blue: #0071FF;
+	--light-blue: #5f5f5f;
+	--dark-blue: #005DD1;
+	--grey: #f2f2f2;
+}
+
+body {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--light-blue);
+}
+
+
+.container {
+	max-width: 400px;
+	width: 100%;
+	background: #fff;
+	padding: 30px;
+	border-radius: 30px;
+}
+.img-area {
+	position: relative;
+	width: 100%;
+	height: 240px;
+	background: var(--grey);
+	margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+}
+.img-area .icon {
+	font-size: 100px;
+	/* cursor: pointer; */
+}
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+	/* cursor: pointer; */
+}
+.img-area p {
+	color: #999;
+	cursor: pointer;
+}
+.img-area p span {
+	font-weight: 600;
+	cursor: pointer;
+}
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+	cursor: pointer;
+}
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+	cursor: pointer;
+}
+.img-area.active:hover::before {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.text-div{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	align-items: center;
+	
+}
+
+.loc{
+	/* border: 2px solid black; */
+	height: 60px;
+	width: 50px;
+}
+.post {
+	display: block;
+	width: 100%;
+	padding: 16px 0;
+	border-radius: 15px;
+	background: var(--blue);
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.post:hover {
+	background: var(--dark-blue);
+}
+
+button {
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+img:hover{
+    animation: shake 0.5;
+    animation-iteration-count: infinite;
+}
+
+    </style>
+</head>
+<body>
+    {{>navbar}}
+
+
+
+
+	<section class="section section-importance">
+    <div class="custom-card">
+        <div class="custom-card-content">
+          <h2 class="custom-card-title">Helpline</h2>
+          <p class="custom-card-text">disasterassistance.gov is the goverment webiste providing more info incase of extreme events to share awareness among common people. Information shared is for welfare purpose only and subject to terms and conditions.</p>
+		<button class="btn" onclick="window.location.href='/sosbutton'" style="background-color:red; color:white;">SOS Emergency</button>
+        </div>
+		
+        {{!-- <div class="custom-card-image">
+          <img src="https://i.ytimg.com/vi/Ag6iFXkkQsE/maxresdefault.jpg" alt="Placeholder Image">
+        </div>
+      </div> --}}
+   </section>
+   <section id="sensors">
+	  <div class="header">
+  <h2 style="margin-left:10%;">SENSORS</h2>
+</div>
+
+<div class="row" style="margin-left:10%; margin-right:10%">
+Sensors are useful in disaster management as they provide real-time data and information for early warning, situational awareness, damage assessment, resource allocation, and decision-making. They help in detecting and monitoring disasters, assessing their impact, and guiding response efforts to minimize the loss of life and property.   
+
+<img src="https://www.micro-epsilon.in/images/titles/thermal-imagers/thermal-imagers-4_820x220px.jpg" alt="">
+      
+    </div>
+   </section>
+
+
+
+	{{!-- <section class="section section-importance">
+    <div class="custom-card">
+        <div class="custom-card-content">
+          <h2 class="custom-card-title">Role of Thermal Sensors</h2>
+          <p class="custom-card-text">Thermal camera serves as a heat sensor that detects temperature diffe ences between objects and the scene itself</p> --}}
+
+		{{!-- <a href="/thermal">Click here to read about thermal sensors</a> --}}
+		{{!-- <a href="/thermal"><button>Pedict Disaster</button></a>
+
+        </div> --}}
+        {{!-- <div class="custom-card-image">
+          <img src="https://i.ytimg.com/vi/Ag6iFXkkQsE/maxresdefault.jpg" alt="Placeholder Image">
+        </div>
+      </div> --}}
+   {{!-- </section> --}}
+
+   {{!-- <section class="section section-importance">
+    <div class="custom-card">
+        <div class="custom-card-content">
+          <h2 class="custom-card-title">Predict the Disaster</h2>
+          <p class="custom-card-text">Quickly predict the Disaster around yop</p>
+		  <a href="/predict"><button>Pedict Disaster</button></a>
+		
+        </div> --}}
+		
+        {{!-- <div class="custom-card-image">
+          <img src="https://i.ytimg.com/vi/Ag6iFXkkQsE/maxresdefault.jpg" alt="Placeholder Image">
+        </div>
+      </div> --}}
+   {{!-- </section> --}}
+
+
+
+	
+    {{>footer}}
+	
+	<script src="script.js"></script>
+
+	<script src="https://kit.fontawesome.com/fcfa5232b7.js" crossorigin="anonymous"></script>
+    <script>
+        const selectImage = document.querySelector('.select-image');
+const inputFile = document.querySelector('#file');
+const imgArea = document.querySelector('.img-area');
+
+const locBtn = document.getElementById('share');
+
+const http = new XMLHttpRequest()
+const result = document.querySelector('#result');
+
+locBtn.addEventListener("click", () =>{
+	findMyCoords()
+})
+
+function findMyCoords(){
+	
+
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition
+		((position) =>{
+			// console.log(position.coords.latitude, position.coords.longitude);
+			const bdcAPI = `https://api-bdc.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`
+			getAPI(bdcAPI);
+		},
+		(err) => {
+			alert(err.message)
+		})
+	}
+	else{
+		alert("Geolocation is not supported")
+	}
+}
+
+
+function getAPI(bdcAPI){
+	http.open("GET",bdcAPI);
+	http.send();
+	http.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status ==200){
+			const results = JSON.parse(this.responseText);
+
+			result.innerText = `${results.locality}, ${results.city}, ${results.countryName}`
+
+
+			console.log(this.responseText)
+
+
+
+		}
+	}
+
+}
+
+
+
+
+
+
+selectImage.addEventListener('click', function () {
+	inputFile.click();
+})
+
+inputFile.addEventListener('change', function () {
+	const image = this.files[0]
+	if(image.size < 2000000) {
+		const reader = new FileReader();
+		reader.onload = ()=> {
+			const allImg = imgArea.querySelectorAll('img');
+			allImg.forEach(item=> item.remove());
+			const imgUrl = reader.result;
+			const img = document.createElement('img');
+			img.src = imgUrl;
+			imgArea.appendChild(img);
+			imgArea.classList.add('active');
+			imgArea.dataset.img = image.name;
+		}
+		reader.readAsDataURL(image);
+	} else {
+		alert("Image size more than 2MB");
+	}
+})
+    </script>
+	
+</body>
+</html>
