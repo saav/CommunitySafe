@@ -29,6 +29,3 @@ The server will start on
 ```sh
 localhost:3000
 ```
-
-<img width="959" alt="image" src="https://github.com/saav/CommunitySafe/assets/84653396/401a4a36-98df-40e7-92e8-ab906ee16cc1">
-
